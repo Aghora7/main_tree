@@ -16,40 +16,6 @@
 
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
-
-#include <stdint.h>
-
-#include <string.h>
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-int property_get(const char *key, char *value, const char *default_value);
-#ifdef __cplusplus
-}
-#endif
-
-
-static inline const char* BtmGetDefaultName()
-{
-    char product_device[92];
-    property_get("ro.product.device", product_device, "");
-
-    if (strstr(product_device, "olive"))
-        return "Xiaomi Redmi 8";
-    if (strstr(product_device, "olivelite"))
-        return "Xiaomi Redmi 8A";
-    if (strstr(product_device, "olivewood"))
-        return "Xiaomi Redmi 8A Dual";
-    if (strstr(product_device, "pine"))
-        return "Xiaomi Redmi 7A";
-
-    // Fallback to ro.product.model
-    return "";
-}
-
-#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
-
 // Disables read remote device feature
 #define BTA_SKIP_BLE_READ_REMOTE_FEAT FALSE
 #define MAX_ACL_CONNECTIONS    7
@@ -64,5 +30,4 @@ static inline const char* BtmGetDefaultName()
 #define BTA_DISABLE_DELAY 1000 /* in milliseconds */
 #define BTM_WBS_INCLUDED TRUE
 #define BTIF_HF_WBS_PREFERRED TRUE
-
 #endif

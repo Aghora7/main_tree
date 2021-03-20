@@ -1,7 +1,24 @@
-# Bluetooth
-persist.bluetooth.a2dp_offload.disabled=true
-persist.vendor.qcom.bluetooth.enable.splita2dp=true
-ro.bluetooth.a2dp_offload.supported=true
+# BLUETOOTH
+
+#persist.bluetooth.a2dp_offload.disabled=true
+#persist.vendor.qcom.bluetooth.enable.splita2dp=true
+#ro.bluetooth.a2dp_offload.supported=true
+
+#system prop for Bluetooth SOC type
+ro.bluetooth.library_name=libbluetooth_qti.so
+persist.vendor.btstack.enable.splita2dp=false
+
+# System prop to turn on hfp client
+bluetooth.hfp.client=1
+
+# AUDIO
+
+#enable offload audio video playback by default
+audio.offload.video=true
+
+#minimum duration for offload playback in secs
+audio.offload.min.duration.secs=30
+
 
 # Brightness
  persist.sys.qcom-brightness="$(cat /sys/class/leds/lcd-backlight/max_brightness)"
