@@ -34,10 +34,6 @@ PRODUCT_PACKAGES += \
     DevicesOverlay \
     DevicesAndroidOverlay
 
-# Bluetooth
-PRODUCT_PACKAGES += \
-    audio.bluetooth.default
-
 #CNE
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
@@ -145,6 +141,10 @@ PRODUCT_PACKAGES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl
+	
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothQti
 
 # Call proprietary blobs setup
 $(call inherit-product-if-exists, vendor/xiaomi/sdm439-common/sdm439-common-vendor.mk)
