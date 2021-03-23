@@ -34,6 +34,10 @@ PRODUCT_PACKAGES += \
     DevicesOverlay \
     DevicesAndroidOverlay
 
+# Audio
+#PRODUCT_PACKAGES += \
+#   audio.primary.msm8937
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     audio.bluetooth.default
@@ -147,4 +151,4 @@ PRODUCT_PACKAGES += \
     libnl
 
 # Call proprietary blobs setup
-$(call inherit-product-if-exists, vendor/xiaomi/sdm439-common/sdm439-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/olivewood/olivewood-vendor.mk)
