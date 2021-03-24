@@ -146,5 +146,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libnl
 
+# IMS
+PRODUCT_PACKAGES += \
+    ims
+
 # Call proprietary blobs setup
 $(call inherit-product-if-exists, vendor/xiaomi/sdm439-common/sdm439-common-vendor.mk)
