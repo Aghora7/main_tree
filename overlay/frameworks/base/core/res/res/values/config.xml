@@ -45,10 +45,16 @@
      <bool name="config_carrier_volte_available">true</bool>
      <bool name="config_carrier_volte_tty_supported">true</bool>
 
+    <!-- Flag specifying whether VT is available on device -->
+    <bool name="config_device_vt_available">true</bool>
+
+    <!-- Flag specifying whether WFC over IMS is available on device -->
+    <bool name="config_device_wfc_ims_available">true</bool>
+
     <!-- Flag specifying whether WFC over IMS should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
-     <bool name="config_carrier_wfc_ims_available">false</bool>
+     <bool name="config_carrier_wfc_ims_available">true</bool>
 
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
      <bool name="config_cellBroadcastAppLinks">true</bool>
@@ -181,12 +187,12 @@
      <bool name="config_sustainedPerformanceModeSupported">false</bool>
 
     <!-- Whether or not swipe up gesture's opt-in setting is available on this device -->
-     <bool name="config_swipe_up_gesture_setting_available">false</bool>
+     <bool name="config_swipe_up_gesture_setting_available">true</bool>
 
     <!-- Config determines whether to update phone object when voice registration
          state changes. Voice radio tech change will always trigger an update of
          phone object irrespective of this config -->
-     <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
+     <bool name="config_switch_phone_on_voice_reg_state_change">true</bool>
 
     <!-- When true, the tethering upstream network follows the current default
          Internet network (except when the current default network is mobile,
@@ -811,4 +817,11 @@
          running in WAL mode.
          Choices are: FULL, NORMAL, OFF. -->
     <string name="db_wal_sync_mode">OFF</string>
+
+    <!-- Controls the navigation bar interaction mode:
+         0: 3 button mode (back, home, overview buttons)
+         1: 2 button mode (back, home buttons + swipe up for overview)
+         2: gestures only for back, home and overview -->
+    <integer name="config_navBarInteractionMode">2</integer>
+
 </resources>
